@@ -1,0 +1,298 @@
+:root {
+    --cream: white;
+    --cream-soft: #fff8e8;
+    --teal: rgb(1, 61, 79);
+    --burgundy: rgb(167, 6, 48);
+    --brown: rgb(52, 26, 8);
+    --ink: #263238;
+    --shadow: 0 16px 35px rgba(52, 26, 8, 0.14);
+}
+
+body {
+    margin: 0;
+    background: white;
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+header,
+header *,
+.footer,
+.footer * {
+    margin: 0;
+}
+
+header {
+    width: min(1180px, calc(100% - 32px));
+    max-width: none;
+    margin: 18px auto 24px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    background: linear-gradient(135deg, var(--cream), #ffe9b7);
+    border: 1px solid rgba(167, 6, 48, 0.18);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.coffe-logo {
+    width: 74px;
+    height: 74px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff7e4;
+    box-shadow: 0 8px 20px rgba(52, 26, 8, 0.18);
+    flex: 0 0 auto;
+}
+
+.logo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 0.95;
+    color: var(--burgundy);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.logo span {
+    display: block;
+    color: var(--teal);
+    font-size: 0.78em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.navbar {
+    margin-left: auto;
+    padding: 0;
+    background: transparent;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(1, 61, 79, 0.25);
+    border-radius: 14px;
+    color: var(--teal);
+    background: rgba(255, 255, 255, 0.45);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a,
+.navbar-btn {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.95rem;
+    color: var(--teal);
+    background: rgba(255, 255, 255, 0.24);
+    border: 1.5px solid rgba(1, 61, 79, 0.18);
+    border-radius: 999px;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--burgundy);
+    background: rgba(255, 255, 255, 0.62);
+    border-color: rgba(167, 6, 48, 0.32);
+    transform: translateY(-1px);
+}
+
+.nav-links a[aria-current="page"] {
+    color: #fff;
+    background: var(--teal);
+    border-color: var(--teal);
+    box-shadow: 0 5px 0 rgba(1, 61, 79, 0.18);
+}
+
+.navbar-btn {
+    min-width: 92px;
+    color: #fff;
+    background: var(--burgundy);
+    border: 2px solid rgba(255, 255, 255, 0.82);
+    box-shadow: 0 5px 0 rgba(115, 18, 22, 0.24);
+}
+
+.navbar-btn:hover,
+.navbar-btn:focus-visible {
+    color: var(--cream-soft);
+    background: var(--teal);
+    border-color: #fff;
+}
+
+select,
+.select-food {
+    min-height: 48px;
+    padding: 0 44px 0 16px;
+    color: var(--teal);
+    background-color: #fffef8;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--burgundy) 50%),
+        linear-gradient(135deg, var(--burgundy) 50%, transparent 50%);
+    background-position:
+        calc(100% - 22px) 20px,
+        calc(100% - 15px) 20px;
+    background-size: 8px 8px, 8px 8px;
+    background-repeat: no-repeat;
+    border: 2px solid rgba(1, 61, 79, 0.2);
+    border-radius: 999px;
+    font-weight: 700;
+    appearance: none;
+    cursor: pointer;
+}
+
+select:focus,
+.select-food:focus {
+    border-color: var(--burgundy);
+    box-shadow: 0 0 0 4px rgba(167, 6, 48, 0.12);
+    outline: none;
+}
+
+.footer {
+    width: min(1180px, calc(100% - 32px));
+    margin: 34px auto 20px;
+    padding: 24px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--burgundy), #7a1b04);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
+}
+
+.footer p,
+.footer a {
+    color: #fff !important;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+.footer-links a,
+.footer .Submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer .Submit:hover {
+    background: rgba(255, 255, 255, 0.24);
+    text-decoration: none;
+}
+
+.footer-credit {
+    font-size: 0.95rem;
+    opacity: 0.94;
+}
+
+.footer-credit strong {
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 780px) {
+    header {
+        width: min(100% - 20px, 680px);
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    .coffe-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .logo {
+        font-size: clamp(1.1rem, 6vw, 1.45rem);
+    }
+
+    .menu-icon {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% + 8px);
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        width: 100%;
+        padding: 12px;
+        background: var(--cream-soft);
+        border: 1px solid rgba(1, 61, 79, 0.16);
+        border-radius: 20px;
+        box-shadow: 0 18px 35px rgba(52, 26, 8, 0.18);
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: grid;
+    }
+
+    .nav-links a,
+    .navbar-btn {
+        width: 100%;
+    }
+
+    .footer {
+        width: min(100% - 20px, 680px);
+        padding: 20px 14px;
+    }
+}
